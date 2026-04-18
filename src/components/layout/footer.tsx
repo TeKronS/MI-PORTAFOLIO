@@ -1,13 +1,24 @@
+'use client';
+
 import { Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/hooks/use-language';
+
+const translations = {
+    rights: {
+        en: "All rights reserved.",
+        es: "Todos los derechos reservados."
+    }
+}
 
 export function Footer() {
+  const { language } = useLanguage();
   return (
     <footer className="w-full bg-secondary text-secondary-foreground">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 px-4 py-8 md:px-6">
         <div className="text-center sm:text-left">
           <p className="font-bold font-headline">Tekron Web Studio</p>
-          <p className="text-sm">© {new Date().getFullYear()} Simon Enrique Ramirez Ferrer. All rights reserved.</p>
+          <p className="text-sm">© {new Date().getFullYear()} Simon Enrique Ramirez Ferrer. {translations.rights[language]}</p>
         </div>
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="icon" asChild>
