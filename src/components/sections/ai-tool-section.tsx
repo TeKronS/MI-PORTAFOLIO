@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { generateProjectSummary } from '@/ai/flows/generate-project-summary-flow';
+import { useLanguage } from '@/hooks/use-language';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,10 +20,27 @@ const aiFormSchema = z.object({
   objectives: z.string().min(10, 'Please describe the project objectives in more detail.'),
 });
 
+const translations = {
+    sectionTitle: { en: "AI Project Briefer", es: "Resumidor de Proyectos con IA" },
+    sectionDescription: { en: "Leverage AI to craft the perfect project summary. This tool demonstrates my ability to integrate generative AI into applications.", es: "Aprovecha la IA para crear el resumen de proyecto perfecto. Esta herramienta demuestra mi capacidad para integrar IA generativa en aplicaciones." },
+    cardTitle: { en: "Generate a Project Summary", es: "Generar un Resumen de Proyecto" },
+    cardDescription: { en: "Enter your project details below.", es: "Introduce los detalles de tu proyecto a continuación." },
+    keywordsLabel: { en: "Keywords (comma-separated)", es: "Palabras clave (separadas por comas)" },
+    keywordsPlaceholder: { en: "e.g., e-commerce, real-time, data visualization", es: "ej., e-commerce, tiempo-real, visualización de datos" },
+    technologiesLabel: { en: "Technologies (comma-separated)", es: "Tecnologías (separadas por comas)" },
+    technologiesPlaceholder: { en: "e.g., Next.js, Firebase, GraphQL", es: "ej., Next.js, Firebase, GraphQL" },
+    objectivesLabel: { en: "Project Objectives", es: "Objetivos del Proyecto" },
+    objectivesPlaceholder: { en: "Describe the main goals and purpose of the project...", es: "Describe los principales objetivos y el propósito del proyecto..." },
+    generateButton: { en: "Generate Summary", es: "Generar Resumen" },
+    generatedSummaryTitle: { en: "Generated Summary:", es: "Resumen Generado:" },
+    error: { en: "Failed to generate summary. Please try again.", es: "No se pudo generar el resumen. Por favor, inténtalo de nuevo." },
+}
+
 export function AiToolSection() {
   const [summary, setSummary] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const { language } = useLanguage();
 
   const form = useForm<z.infer<typeof aiFormSchema>>({
     resolver: zodResolver(aiFormSchema),
@@ -48,7 +66,7 @@ export function AiToolSection() {
       setSummary(result.summary);
     } catch (err) {
       console.error('Error generating summary:', err);
-      setError('Failed to generate summary. Please try again.');
+      setError(translations.error[language]);
     } finally {
       setIsLoading(false);
     }
@@ -58,17 +76,17 @@ export function AiToolSection() {
     <section id="ai-tool" className="w-full bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">AI Project Briefer</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold">{translations.sectionTitle[language]}</h2>
           <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Leverage AI to craft the perfect project summary. This tool demonstrates my ability to integrate generative AI into applications.
+            {translations.sectionDescription[language]}
           </p>
         </div>
         <Card className="max-w-3xl mx-auto">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <CardHeader>
-                <CardTitle>Generate a Project Summary</CardTitle>
-                <CardDescription>Enter your project details below.</CardDescription>
+                <CardTitle>{translations.cardTitle[language]}</CardTitle>
+                <CardDescription>{translations.cardDescription[language]}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <FormField
@@ -76,9 +94,9 @@ export function AiToolSection() {
                   name="keywords"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Keywords (comma-separated)</FormLabel>
+                      <FormLabel>{translations.keywordsLabel[language]}</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g., e-commerce, real-time, data visualization" {...field} />
+                        <Input placeholder={translations.keywordsPlaceholder[language]} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -89,9 +107,9 @@ export function AiToolSection() {
                   name="technologies"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Technologies (comma-separated)</FormLabel>
+                      <FormLabel>{translations.technologiesLabel[language]}</FormLabel>
                       <FormControl>
-                        <Input placeholder="e.g., Next.js, Firebase, GraphQL" {...field} />
+                        <Input placeholder={translations.technologiesPlaceholder[language]} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -102,9 +120,9 @@ export function AiToolSection() {
                   name="objectives"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Project Objectives</FormLabel>
+                      <FormLabel>{translations.objectivesLabel[language]}</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Describe the main goals and purpose of the project..." {...field} />
+                        <Textarea placeholder={translations.objectivesPlaceholder[language]} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -118,7 +136,7 @@ export function AiToolSection() {
                   ) : (
                     <Wand2 />
                   )}
-                  Generate Summary
+                  {translations.generateButton[language]}
                 </Button>
               </CardFooter>
             </form>
@@ -126,7 +144,7 @@ export function AiToolSection() {
 
           {(summary || error) && (
             <div className="p-6 border-t">
-              <h4 className="font-semibold mb-2">Generated Summary:</h4>
+              <h4 className="font-semibold mb-2">{translations.generatedSummaryTitle[language]}</h4>
               {summary && <p className="text-muted-foreground bg-secondary p-4 rounded-md font-code">{summary}</p>}
               {error && <p className="text-destructive">{error}</p>}
             </div>

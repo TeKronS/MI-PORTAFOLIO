@@ -5,12 +5,13 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { submitContactForm } from '@/app/actions';
 import { useToast } from "@/hooks/use-toast"
+import { useLanguage } from '@/hooks/use-language';
 
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Loader2, Mail, Send } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
 
 
 const contactFormSchema = z.object({
@@ -19,8 +20,25 @@ const contactFormSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
+const translations = {
+    sectionTitle: { en: "Get In Touch", es: "Ponte en Contacto" },
+    sectionDescription: { en: "Have a project in mind, a question, or just want to connect? Send me a message!", es: "¿Tienes un proyecto en mente, una pregunta o simplemente quieres conectar? ¡Envíame un mensaje!" },
+    nameLabel: { en: "Name", es: "Nombre" },
+    namePlaceholder: { en: "Your Name", es: "Tu Nombre" },
+    emailLabel: { en: "Email", es: "Correo Electrónico" },
+    emailPlaceholder: { en: "your.email@example.com", es: "tu.email@ejemplo.com" },
+    messageLabel: { en: "Message", es: "Mensaje" },
+    messagePlaceholder: { en: "Tell me about your project or inquiry...", es: "Cuéntame sobre tu proyecto o consulta..." },
+    sendButton: { en: "Send Message", es: "Enviar Mensaje" },
+    toastSuccessTitle: { en: "Message Sent!", es: "¡Mensaje Enviado!" },
+    toastSuccessDescription: { en: "Thank you for your message! I'll get back to you soon.", es: "¡Gracias por tu mensaje! Me pondré en contacto contigo pronto." },
+    toastErrorTitle: { en: "Uh oh! Something went wrong.", es: "¡Uy! Algo salió mal." },
+    toastErrorDescription: { en: "There was an error with your submission. Please check the fields and try again.", es: "Hubo un error con tu envío. Por favor, revisa los campos e inténtalo de nuevo." },
+}
+
 export function ContactSection() {
   const { toast } = useToast()
+  const { language } = useLanguage();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -38,15 +56,15 @@ export function ContactSection() {
 
     if (result.success) {
       toast({
-        title: "Message Sent!",
-        description: result.message,
+        title: translations.toastSuccessTitle[language],
+        description: translations.toastSuccessDescription[language],
       });
       form.reset();
     } else {
       toast({
         variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: result.message,
+        title: translations.toastErrorTitle[language],
+        description: translations.toastErrorDescription[language],
       });
     }
   }
@@ -55,9 +73,9 @@ export function ContactSection() {
     <section id="contact" className="w-full bg-secondary">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Get In Touch</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold">{translations.sectionTitle[language]}</h2>
           <p className="text-lg text-muted-foreground mt-2 max-w-xl mx-auto">
-            Have a project in mind, a question, or just want to connect? Send me a message!
+            {translations.sectionDescription[language]}
           </p>
         </div>
         <div className="max-w-2xl mx-auto">
@@ -68,9 +86,9 @@ export function ContactSection() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>{translations.nameLabel[language]}</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your Name" {...field} />
+                      <Input placeholder={translations.namePlaceholder[language]} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -81,9 +99,9 @@ export function ContactSection() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>{translations.emailLabel[language]}</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="your.email@example.com" {...field} />
+                      <Input type="email" placeholder={translations.emailPlaceholder[language]} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -94,9 +112,9 @@ export function ContactSection() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>{translations.messageLabel[language]}</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Tell me about your project or inquiry..." className="min-h-[150px]" {...field} />
+                      <Textarea placeholder={translations.messagePlaceholder[language]} className="min-h-[150px]" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,7 +123,7 @@ export function ContactSection() {
               <div className="flex justify-end">
                 <Button type="submit" size="lg" disabled={isSubmitting}>
                    {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
-                  Send Message
+                  {translations.sendButton[language]}
                 </Button>
               </div>
             </form>

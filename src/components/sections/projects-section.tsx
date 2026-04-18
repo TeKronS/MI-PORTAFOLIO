@@ -1,31 +1,39 @@
+'use client';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Github, Link as LinkIcon } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/hooks/use-language";
+
+const translations = {
+    title: { en: "My Work", es: "Mi Trabajo" },
+    description: { en: "Here are some of the projects I'm proud to have worked on.", es: "Estos son algunos de los proyectos en los que me enorgullece haber trabajado." },
+    liveDemo: { en: "Live Demo", es: "Demo en Vivo" },
+}
 
 const projects = [
   {
     id: "project-1",
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce site built with Next.js, featuring product listings, a shopping cart, and a secure checkout process powered by Firebase.",
+    title: { en: "E-commerce Platform", es: "Plataforma de E-commerce" },
+    description: { en: "A full-featured e-commerce site built with Next.js, featuring product listings, a shopping cart, and a secure checkout process powered by Firebase.", es: "Un sitio de comercio electrónico con todas las funciones creado con Next.js, que incluye listados de productos, un carrito de compras y un proceso de pago seguro con Firebase." },
     technologies: ["Next.js", "React", "Firebase", "Tailwind CSS"],
     githubUrl: "https://github.com",
     liveUrl: "#",
   },
   {
     id: "project-2",
-    title: "Data Dashboard",
-    description: "An interactive dashboard for visualizing complex data sets using React and GraphQL. Features real-time updates and customizable chart components.",
+    title: { en: "Data Dashboard", es: "Dashboard de Datos" },
+    description: { en: "An interactive dashboard for visualizing complex data sets using React and GraphQL. Features real-time updates and customizable chart components.", es: "Un dashboard interactivo para visualizar conjuntos de datos complejos usando React y GraphQL. Cuenta con actualizaciones en tiempo real y componentes de gráficos personalizables." },
     technologies: ["React", "GraphQL", "TypeScript", "D3.js"],
     githubUrl: "https://github.com",
     liveUrl: "#",
   },
   {
     id: "project-3",
-    title: "Portfolio Website",
-    description: "This very portfolio, designed in Figma and developed with Next.js. A showcase of responsive design and modern web development practices.",
+    title: { en: "Portfolio Website", es: "Sitio Web de Portafolio" },
+    description: { en: "This very portfolio, designed in Figma and developed with Next.js. A showcase of responsive design and modern web development practices.", es: "Este mismo portafolio, diseñado en Figma y desarrollado con Next.js. Una muestra de diseño responsivo y prácticas modernas de desarrollo web." },
     technologies: ["Next.js", "Figma", "TypeScript", "Responsive Design"],
     githubUrl: "https://github.com",
     liveUrl: "#",
@@ -33,13 +41,14 @@ const projects = [
 ];
 
 export function ProjectsSection() {
+    const { language } = useLanguage();
     const projectImages = PlaceHolderImages;
   return (
     <section id="projects" className="w-full bg-secondary">
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">My Work</h2>
-          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">Here are some of the projects I'm proud to have worked on.</p>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold">{translations.title[language]}</h2>
+          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">{translations.description[language]}</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
@@ -50,7 +59,7 @@ export function ProjectsSection() {
                 {image && (
                      <Image
                         src={image.imageUrl}
-                        alt={project.title}
+                        alt={project.title[language]}
                         fill
                         className="object-cover"
                         data-ai-hint={image.imageHint}
@@ -58,10 +67,10 @@ export function ProjectsSection() {
                 )}
               </div>
               <CardHeader>
-                <CardTitle className="font-headline">{project.title}</CardTitle>
+                <CardTitle className="font-headline">{project.title[language]}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-muted-foreground mb-4">{project.description[language]}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map(tech => (
                     <Badge key={tech} variant="outline">{tech}</Badge>
@@ -78,7 +87,7 @@ export function ProjectsSection() {
                 <Button size="sm" asChild>
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <LinkIcon />
-                    Live Demo
+                    {translations.liveDemo[language]}
                   </a>
                 </Button>
               </CardFooter>
