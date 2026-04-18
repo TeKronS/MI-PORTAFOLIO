@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Abstract coding background",
+      "imageUrl": "https://picsum.photos/seed/project1/600/400",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "project-2",
+      "description": "Modern web application interface",
+      "imageUrl": "https://picsum.photos/seed/project2/600/400",
+      "imageHint": "web app"
+    },
+    {
+      "id": "project-3",
+      "description": "Data visualization dashboard",
+      "imageUrl": "https://picsum.photos/seed/project3/600/400",
+      "imageHint": "dashboard chart"
+    }
+  ]
 }
