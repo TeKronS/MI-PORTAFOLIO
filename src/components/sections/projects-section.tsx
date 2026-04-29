@@ -16,7 +16,7 @@ const translations = {
 const projects = [
   {
     id: "project-5",
-    title: { en: "White-Label Professional Online Raffle Platform", es: "Plataforma Profesional de Rifas Online (Marca Blanca)" },
+    title: { en: "White-Label Professional Online Raffle Platform", es: "Plataforma Profesional de Rifas Online" },
     description: { en: "A comprehensive and scalable solution for raffle management. It enables automated ticket sales, bank payment reporting, and AI-powered ticket number verification. Designed to be rebranded in minutes for any business.", es: "Una solución integral y escalable para la gestión de sorteos. Permite la venta automatizada de tickets, el reporte de pagos bancarios y la verificación de números asignados mediante inteligencia artificial. Diseñada para ser personalizada en minutos para cualquier marca." },
     technologies: ["Next.js 15", "React", "Firebase (Firestore)", "Genkit (AI)", "Tailwind CSS", "ShadCN UI", "TypeScript", "Lucide Icons"],
     githubUrl: "https://github.com/TeKronS/RIFAS-CLIENTE",
