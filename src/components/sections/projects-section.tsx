@@ -15,6 +15,14 @@ const translations = {
 
 const projects = [
   {
+    id: "project-4",
+    title: { en: "Raffle Admin Pro", es: "Gestor de Rifas Pro" },
+    description: { en: "A professional platform for the comprehensive management of raffles and prize drawings. It allows creating detailed raffles, verifying customer payments in real-time, automatically assigning tickets, and managing user roles (administrators and employees) for secure and efficient task delegation.", es: "Plataforma profesional para la gestión integral de rifas y sorteos. Permite crear rifas, verificar pagos de clientes en tiempo real, asignar tickets automáticamente y gestionar roles de usuario (administradores y empleados) para una delegación de tareas segura y eficiente." },
+    technologies: ["Next.js", "React", "TypeScript", "Firebase (Firestore & Authentication)", "ShadCN UI", "Tailwind CSS", "Zod", "React Hook Form"],
+    githubUrl: "https://github.com/TeKronS/Gestor-de-Rifas",
+    liveUrl: "https://gestor-de-rifas.vercel.app/",
+  },
+  {
     id: "project-1",
     title: { en: "E-commerce Platform", es: "Plataforma de E-commerce" },
     description: { en: "A full-featured e-commerce site built with Next.js, featuring product listings, a shopping cart, and a secure checkout process powered by Firebase.", es: "Un sitio de comercio electrónico con todas las funciones creado con Next.js, que incluye listados de productos, un carrito de compras y un proceso de pago seguro con Firebase." },

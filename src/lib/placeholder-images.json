@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "project-4",
+      "description": "Raffle Admin Pro dashboard",
+      "imageUrl": "https://picsum.photos/seed/project4/600/400",
+      "imageHint": "dashboard analytics"
+    },
+    {
       "id": "project-1",
       "description": "Abstract coding background",
       "imageUrl": "https://picsum.photos/seed/project1/600/400",
