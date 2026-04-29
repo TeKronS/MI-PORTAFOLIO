@@ -15,6 +15,14 @@ const translations = {
 
 const projects = [
   {
+    id: "project-5",
+    title: { en: "White-Label Professional Online Raffle Platform", es: "Plataforma Profesional de Rifas Online (Marca Blanca)" },
+    description: { en: "A comprehensive and scalable solution for raffle management. It enables automated ticket sales, bank payment reporting, and AI-powered ticket number verification. Designed to be rebranded in minutes for any business.", es: "Una solución integral y escalable para la gestión de sorteos. Permite la venta automatizada de tickets, el reporte de pagos bancarios y la verificación de números asignados mediante inteligencia artificial. Diseñada para ser personalizada en minutos para cualquier marca." },
+    technologies: ["Next.js 15", "React", "Firebase (Firestore)", "Genkit (AI)", "Tailwind CSS", "ShadCN UI", "TypeScript", "Lucide Icons"],
+    githubUrl: "https://github.com/TeKronS/RIFAS-CLIENTE",
+    liveUrl: "https://rifas-cliente.vercel.app/",
+  },
+  {
     id: "project-4",
     title: { en: "Raffle Admin Pro", es: "Gestor de Rifas Pro" },
     description: { en: "A professional platform for the comprehensive management of raffles and prize drawings. It allows creating detailed raffles, verifying customer payments in real-time, automatically assigning tickets, and managing user roles (administrators and employees) for secure and efficient task delegation.", es: "Plataforma profesional para la gestión integral de rifas y sorteos. Permite crear rifas, verificar pagos de clientes en tiempo real, asignar tickets automáticamente y gestionar roles de usuario (administradores y empleados) para una delegación de tareas segura y eficiente." },

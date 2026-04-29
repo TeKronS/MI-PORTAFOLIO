@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "project-5",
+      "description": "White-Label Raffle Platform",
+      "imageUrl": "https://picsum.photos/seed/project5/600/400",
+      "imageHint": "Raffle Platform"
+    },
+    {
       "id": "project-4",
       "description": "Gestor de Rifas Pro login screen",
       "imageUrl": "/img/gestor.png"
