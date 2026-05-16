@@ -1,3 +1,4 @@
+
 'use client';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,17 @@ const translations = {
 }
 
 const projects = [
+  {
+    id: "nextshop",
+    title: { en: "NextShop - Premium E-commerce", es: "NextShop - E-commerce Premium" },
+    description: { 
+      en: "A high-performance marketplace that combines minimalist design with robust features. It features an AI assistant for generating product descriptions, a real-time database for inventory and reviews, and a fully responsive interface optimized for conversion.", 
+      es: "Un marketplace de alto rendimiento que combina un diseño minimalista con funcionalidades robustas. Cuenta con un asistente de IA para generar descripciones de productos, base de datos en tiempo real para inventario y reseñas, y una interfaz totalmente responsiva optimizada para la conversión." 
+    },
+    technologies: ["Next.js 15", "React 19", "TypeScript", "Firebase Firestore", "Firebase Authentication", "Google Genkit", "Tailwind CSS", "ShadCN UI", "Lucide Icons"],
+    githubUrl: "https://github.com/TeKronS/NextShop",
+    liveUrl: "https://next-shop-beta-eight.vercel.app/",
+  },
   {
     id: "project-5",
     title: { en: "White-Label Professional Online Raffle Platform", es: "Plataforma Profesional de Rifas Online" },

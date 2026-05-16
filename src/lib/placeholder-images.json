@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "nextshop",
+      "description": "NextShop E-commerce Interface",
+      "imageUrl": "https://picsum.photos/seed/nextshop/600/400",
+      "imageHint": "E-commerce Tech"
+    },
+    {
       "id": "project-5",
       "description": "White-Label Raffle Platform",
       "imageUrl": "/img/RIFAS CLIENTE.png",
