@@ -23,7 +23,7 @@ const projects = [
     },
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "jsPDF", "Lucide React", "Firebase"],
     githubUrl: "https://github.com/TeKronS/REPROHUB",
-    liveUrl: "#",
+    liveUrl: "https://reprohub-tau.vercel.app/",
   },
   {
     id: "nextshop",
