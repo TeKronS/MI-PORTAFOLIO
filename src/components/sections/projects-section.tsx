@@ -22,7 +22,7 @@ const projects = [
       es: "Una suite de herramientas digitales de alto rendimiento diseñada para optimizar los flujos de trabajo en centros de copiado y estudios de diseño. Incluye 'Muralis', un motor avanzado para generar cuadrículas técnicas de impresión a gran escala con solapes configurables." 
     },
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "jsPDF", "Lucide React", "Firebase"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/TeKronS/REPROHUB",
     liveUrl: "#",
   },
   {
