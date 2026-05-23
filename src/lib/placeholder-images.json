@@ -18,6 +18,12 @@
       "imageUrl": "/img/gestor.png"
     },
     {
+      "id": "reprohub",
+      "description": "ReproHub Professional Suite",
+      "imageUrl": "https://picsum.photos/seed/reprohub/600/400",
+      "imageHint": "mural printing"
+    },
+    {
       "id": "project-1",
       "description": "Abstract coding background",
       "imageUrl": "https://picsum.photos/seed/project1/600/400",

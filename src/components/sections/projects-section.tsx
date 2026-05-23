@@ -1,4 +1,3 @@
-
 'use client';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -15,6 +14,17 @@ const translations = {
 }
 
 const projects = [
+  {
+    id: "reprohub",
+    title: { en: "ReproHub | Professional Reprography Suite", es: "ReproHub | Suite Profesional de Reprografía" },
+    description: { 
+      en: "A high-performance digital toolkit designed to optimize workflows in copy centers and design studios. It features 'Muralis', an advanced engine for generating large-scale technical print grids with configurable overlaps.", 
+      es: "Una suite de herramientas digitales de alto rendimiento diseñada para optimizar los flujos de trabajo en centros de copiado y estudios de diseño. Incluye 'Muralis', un motor avanzado para generar cuadrículas técnicas de impresión a gran escala con solapes configurables." 
+    },
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "jsPDF", "Lucide React", "Firebase"],
+    githubUrl: "#",
+    liveUrl: "#",
+  },
   {
     id: "nextshop",
     title: { en: "NextShop - Premium E-commerce", es: "NextShop - E-commerce Premium" },
@@ -41,30 +51,6 @@ const projects = [
     technologies: ["Next.js", "React", "TypeScript", "Firebase (Firestore & Authentication)", "ShadCN UI", "Tailwind CSS", "Zod", "React Hook Form"],
     githubUrl: "https://github.com/TeKronS/Gestor-de-Rifas",
     liveUrl: "https://gestor-de-rifas.vercel.app/",
-  },
-  {
-    id: "project-1",
-    title: { en: "E-commerce Platform", es: "Plataforma de E-commerce" },
-    description: { en: "A full-featured e-commerce site built with Next.js, featuring product listings, a shopping cart, and a secure checkout process powered by Firebase.", es: "Un sitio de comercio electrónico con todas las funciones creado con Next.js, que incluye listados de productos, un carrito de compras y un proceso de pago seguro con Firebase." },
-    technologies: ["Next.js", "React", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com",
-    liveUrl: "#",
-  },
-  {
-    id: "project-2",
-    title: { en: "Data Dashboard", es: "Dashboard de Datos" },
-    description: { en: "An interactive dashboard for visualizing complex data sets using React and GraphQL. Features real-time updates and customizable chart components.", es: "Un dashboard interactivo para visualizar conjuntos de datos complejos usando React y GraphQL. Cuenta con actualizaciones en tiempo real y componentes de gráficos personalizables." },
-    technologies: ["React", "GraphQL", "TypeScript", "D3.js"],
-    githubUrl: "https://github.com",
-    liveUrl: "#",
-  },
-  {
-    id: "project-3",
-    title: { en: "Portfolio Website", es: "Sitio Web de Portafolio" },
-    description: { en: "This very portfolio, designed in Figma and developed with Next.js. A showcase of responsive design and modern web development practices.", es: "Este mismo portafolio, diseñado en Figma y desarrollado con Next.js. Una muestra de diseño responsivo y prácticas modernas de desarrollo web." },
-    technologies: ["Next.js", "Figma", "TypeScript", "Responsive Design"],
-    githubUrl: "https://github.com",
-    liveUrl: "#",
   },
 ];
 
