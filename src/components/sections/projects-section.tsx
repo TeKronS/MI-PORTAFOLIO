@@ -15,15 +15,15 @@ const translations = {
 
 const projects = [
   {
-    id: "reprohub",
-    title: { en: "ReproHub | Professional Reprography Suite", es: "ReproHub | Suite Profesional de Reprografía" },
+    id: "multiprinttools",
+    title: { en: "MultiPrintTools | Professional Reprography Suite", es: "MultiPrintTools | Suite Profesional de Reprografía" },
     description: { 
-      en: "A high-performance digital toolkit designed to optimize workflows in copy centers and design studios. It features 'Muralis', an advanced engine for generating large-scale technical print grids with configurable overlaps.", 
-      es: "Una suite de herramientas digitales de alto rendimiento diseñada para optimizar los flujos de trabajo en centros de copiado y estudios de diseño. Incluye 'Muralis', un motor avanzado para generar cuadrículas técnicas de impresión a gran escala con solapes configurables." 
+      en: "Digital toolkit for printing experts that automates technical mural grid creation, PDF management, and image optimization with guaranteed local processing.", 
+      es: "Toolkit digital para expertos en impresión que automatiza la creación de cuadrículas técnicas para murales, gestión de PDFs y optimización de imágenes con procesamiento local garantizado." 
     },
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "jsPDF", "Lucide React", "Firebase"],
-    githubUrl: "https://github.com/TeKronS/REPROHUB",
-    liveUrl: "https://reprohub-tau.vercel.app/",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "jsPDF", "pdf-lib", "pdfjs-dist", "Lucide React", "Firebase", "Genkit"],
+    githubUrl: "https://github.com/TeKronS/MultiPrintTools",
+    liveUrl: "https://tekron-web-studio.vercel.app/",
   },
   {
     id: "nextshop",

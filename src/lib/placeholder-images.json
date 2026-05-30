@@ -18,10 +18,10 @@
       "imageUrl": "/img/gestor.png"
     },
     {
-      "id": "reprohub",
-      "description": "ReproHub Professional Suite",
-      "imageUrl": "https://picsum.photos/seed/reprohub/600/400",
-      "imageHint": "mural printing"
+      "id": "multiprinttools",
+      "description": "MultiPrintTools Professional Suite",
+      "imageUrl": "https://picsum.photos/seed/multiprinttools/600/400",
+      "imageHint": "reprography tools"
     },
     {
       "id": "project-1",
