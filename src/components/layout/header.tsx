@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { useLanguage } from '@/hooks/use-language';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageToggle } from '@/components/language-toggle';
+import Image from 'next/image';
 
 const navLinkTranslations = {
   about: { en: 'About', es: 'Sobre mí' },
@@ -43,8 +44,17 @@ export function Header() {
       isScrolled ? "bg-background/80 backdrop-blur-sm border-b border-border" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <a href="#home" className="text-xl font-bold font-headline transition-colors hover:text-primary">
-          Tekron Web Studio
+        <a href="#home" className="flex items-center gap-3 transition-colors hover:text-primary group">
+          <Image 
+            src="/img/TeKron Web Studio Icon.png" 
+            alt="TeKron Web Studio Logo" 
+            width={48} 
+            height={48} 
+            className="h-10 w-auto transition-transform group-hover:scale-110"
+          />
+          <span className="text-xl font-bold font-headline hidden sm:inline-block">
+            Tekron Web Studio
+          </span>
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
