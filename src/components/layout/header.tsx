@@ -41,7 +41,7 @@ export function Header() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "bg-background/80 backdrop-blur-sm border-b border-border" : "bg-transparent"
+      (isScrolled || isMenuOpen) ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
     )}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <a href="#home" className="flex items-center gap-3 transition-colors hover:text-primary group">
@@ -77,10 +77,15 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border">
-          <nav className="flex flex-col items-center gap-4 p-4">
+        <div className="absolute top-full left-0 w-full md:hidden bg-background border-b border-border shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
+          <nav className="flex flex-col items-center gap-2 p-4">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className="w-full text-center py-2 font-medium text-foreground/80 transition-colors hover:text-primary rounded-md hover:bg-accent">
+              <a 
+                key={link.href} 
+                href={link.href} 
+                onClick={() => setIsMenuOpen(false)} 
+                className="w-full text-center py-3 font-medium text-foreground/80 transition-colors hover:text-primary rounded-md hover:bg-accent"
+              >
                 {navLinkTranslations[link.key][language]}
               </a>
             ))}
