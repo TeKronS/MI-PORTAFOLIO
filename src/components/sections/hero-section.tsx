@@ -10,8 +10,8 @@ const translations = {
         es: "Simon Enrique Ramirez Ferrer"
     },
     subtitle: {
-        en: "Full-Stack Web Developer | Tekron Web Studio",
-        es: "Desarrollador Web Full-Stack | Tekron Web Studio"
+        en: "Full-Stack Web Developer",
+        es: "Desarrollador Web Full-Stack"
     },
     viewWork: {
         en: "View My Work",
