@@ -33,13 +33,12 @@ export function AboutSection() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid md:grid-cols-3 gap-12 items-center">
           <div className="flex justify-center md:justify-start">
-             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-primary">
+             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-primary bg-background">
                 <Image 
-                    src="https://picsum.photos/seed/avatar/400/400"
-                    alt="Simon Enrique Ramirez Ferrer"
+                    src="/img/TeKron Web Studio Icon.png"
+                    alt="TeKron Web Studio Icon"
                     fill
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint="professional portrait"
+                    className="p-4 object-contain"
                 />
             </div>
           </div>
