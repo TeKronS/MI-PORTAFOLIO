@@ -8,7 +8,7 @@ import { LanguageProvider } from '@/components/language-provider';
 import { HtmlLangUpdater } from '@/components/html-lang-updater';
 
 export const metadata: Metadata = {
-  title: 'DevSphere Portfolio | Simon Enrique Ramirez Ferrer',
+  title: 'Tekron Web Studio | Simon Enrique Ramirez Ferrer',
   description: 'The professional portfolio of Simon Enrique Ramirez Ferrer (Tekron Web Studio), a full-stack web developer.',
 };
 
