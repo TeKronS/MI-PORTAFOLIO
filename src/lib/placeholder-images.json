@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "fonemaster",
+      "description": "FoneMaster Smartphone Ecommerce",
+      "imageUrl": "/img/FoneMaster.png",
+      "imageHint": "smartphone ecommerce"
+    },
+    {
       "id": "nextshop",
       "description": "NextShop E-commerce Interface",
       "imageUrl": "/img/nextShop.png",
@@ -22,12 +28,6 @@
       "description": "MultiPrintTools Professional Suite",
       "imageUrl": "/img/multiPtinttools.png",
       "imageHint": "reprography tools"
-    },
-    {
-      "id": "fonemaster",
-      "description": "FoneMaster Smartphone Ecommerce",
-      "imageUrl": "https://picsum.photos/seed/fonemaster/600/400",
-      "imageHint": "smartphone ecommerce"
     },
     {
       "id": "project-1",
