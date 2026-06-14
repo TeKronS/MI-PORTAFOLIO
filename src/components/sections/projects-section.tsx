@@ -15,6 +15,17 @@ const translations = {
 
 const projects = [
   {
+    id: "fonemaster",
+    title: { en: "FoneMaster - Smartphone Ecommerce", es: "FoneMaster - Ecommerce de Smartphones" },
+    description: { 
+      en: "A high-performance e-commerce platform specializing in next-generation smartphones. It features an interactive catalog that allows users to filter devices by complex technical specifications like RAM and network type (5G/4G).", 
+      es: "Plataforma de comercio electrónico de alto rendimiento especializada en smartphones de última generación. Cuenta con un catálogo interactivo que permite filtrar dispositivos por especificaciones técnicas complejas como memoria RAM y tipo de red (5G/4G)." 
+    },
+    technologies: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "ShadCN UI", "Lucide React", "Genkit"],
+    githubUrl: "https://github.com/TeKronS/FoneMaster",
+    liveUrl: "https://fone-master.vercel.app/",
+  },
+  {
     id: "multiprinttools",
     title: { en: "MultiPrintTools | Professional Reprography Suite", es: "MultiPrintTools | Suite Profesional de Reprografía" },
     description: { 
@@ -44,14 +55,6 @@ const projects = [
     githubUrl: "https://github.com/TeKronS/RIFAS-CLIENTE",
     liveUrl: "https://rifas-cliente.vercel.app/",
   },
-  {
-    id: "project-4",
-    title: { en: "Raffle Admin Pro", es: "Gestor de Rifas Pro" },
-    description: { en: "A professional platform for the comprehensive management of raffles and prize drawings. It allows creating detailed raffles, verifying customer payments in real-time, automatically assigning tickets, and managing user roles (administrators and employees) for secure and efficient task delegation.", es: "Plataforma profesional para la gestión integral de rifas y sorteos. Permite crear rifas, verificar pagos de clientes en tiempo real, asignar tickets automáticamente y gestionar roles de usuario (administradores y empleados) para una delegación de tareas segura y eficiente." },
-    technologies: ["Next.js", "React", "TypeScript", "Firebase (Firestore & Authentication)", "ShadCN UI", "Tailwind CSS", "Zod", "React Hook Form"],
-    githubUrl: "https://github.com/TeKronS/Gestor-de-Rifas",
-    liveUrl: "https://gestor-de-rifas.vercel.app/",
-  },
 ];
 
 export function ProjectsSection() {
@@ -65,8 +68,8 @@ export function ProjectsSection() {
           <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">{translations.description[language]}</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => {
-             const image = projectImages.find(img => img.id === project.id) || projectImages[index];
+          {projects.map((project) => {
+             const image = projectImages.find(img => img.id === project.id);
             return(
             <Card key={project.id} className="flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
               <div className="aspect-video relative">
