@@ -1,5 +1,28 @@
-# Firebase Studio
+# Tekron Web Studio - Portfolio
 
-This is a NextJS starter in Firebase Studio.
+Este es el portafolio profesional de **Simon Enrique Ramirez Ferrer**, desarrollado con Next.js, Tailwind CSS y Firebase.
 
-To get started, take a look at src/app/page.tsx.
+## 🚀 Proyectos Destacados
+
+### 1. FoneMaster - Smartphone Ecommerce
+- **Descripción**: E-commerce premium para smartphones con filtrado avanzado y catálogo dinámico.
+- **Tecnologías**: Next.js 15, React 19, TypeScript, Tailwind CSS, ShadCN UI, Genkit.
+- **Demo**: [https://fone-master.vercel.app/](https://fone-master.vercel.app/)
+
+### 2. MultiPrintTools | Suite Profesional de Reprografía
+- **Descripción**: Suite de automatización para centros de copiado con motor de cuadrículas para murales (Muralis).
+- **Tecnologías**: React, Next.js, TypeScript, jsPDF, pdf-lib, pdfjs-dist, Firebase, Genkit.
+- **Demo**: [https://tekron-web-studio.vercel.app/](https://tekron-web-studio.vercel.app/)
+
+### 3. NextShop - E-commerce con IA
+- **Descripción**: Marketplace con asistente de IA para descripciones de productos y gestión en tiempo real.
+- **Tecnologías**: Next.js 15, Firebase (Firestore/Auth), Google Genkit, Tailwind CSS.
+- **Demo**: [https://next-shop-beta-eight.vercel.app/](https://next-shop-beta-eight.vercel.app/)
+
+### 4. Plataforma de Rifas Online (White-Label)
+- **Descripción**: Gestión automatizada de sorteos con verificación de tickets mediante IA.
+- **Tecnologías**: Next.js 15, Firebase, Genkit, Tailwind CSS, ShadCN UI.
+- **Demo**: [https://rifas-cliente.vercel.app/](https://rifas-cliente.vercel.app/)
+
+---
+Desarrollado por **Tekron Web Studio**.
