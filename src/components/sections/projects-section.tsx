@@ -34,7 +34,7 @@ const projects = [
     },
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "jsPDF", "pdf-lib", "pdfjs-dist", "Lucide React", "Firebase", "Genkit"],
     githubUrl: "https://github.com/TeKronS/MultiPrintTools",
-    liveUrl: "https://tekron-web-studio.vercel.app/",
+    liveUrl: "https://www.multiprinttools.com/",
   },
   {
     id: "nextshop",
