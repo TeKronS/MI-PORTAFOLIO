@@ -7,6 +7,12 @@
       "imageHint": "smartphone ecommerce"
     },
     {
+      "id": "gestor-rifas-pro",
+      "description": "Gestor de Rifas Pro Administration Panel",
+      "imageUrl": "/img/gestor.png",
+      "imageHint": "admin dashboard"
+    },
+    {
       "id": "nextshop",
       "description": "NextShop E-commerce Interface",
       "imageUrl": "/img/nextShop.png",
@@ -17,11 +23,6 @@
       "description": "White-Label Raffle Platform",
       "imageUrl": "/img/RIFAS CLIENTE.png",
       "imageHint": "Raffle Platform"
-    },
-    {
-      "id": "project-4",
-      "description": "Gestor de Rifas Pro login screen",
-      "imageUrl": "/img/gestor.png"
     },
     {
       "id": "multiprinttools",
