@@ -26,17 +26,6 @@ const projects = [
     liveUrl: "https://fone-master.vercel.app/",
   },
   {
-    id: "gestor-rifas-pro",
-    title: { en: "Raffle Admin Pro", es: "Gestor de Rifas Pro" },
-    description: { 
-      en: "A comprehensive platform for professional raffle and sweepstakes management. It automates ticket sales, real-time payment verification, and random number assignment. Features include role management for admins and employees, automatic financial summaries, and action auditing.", 
-      es: "Una plataforma integral para la administración profesional de sorteos y rifas. Automatiza la venta de boletos, la verificación de pagos en tiempo real y la asignación aleatoria de números. Incluye gestión de roles para administradores y empleados, resúmenes financieros automáticos y auditoría de acciones." 
-    },
-    technologies: ["Next.js 15", "React", "TypeScript", "Firebase", "Tailwind CSS", "ShadCN UI", "Lucide Icons", "Zod", "React Hook Form"],
-    githubUrl: "https://github.com/TeKronS/Gestor-de-Rifas",
-    liveUrl: "https://gestor-de-rifas.vercel.app/",
-  },
-  {
     id: "multiprinttools",
     title: { en: "MultiPrintTools | Professional Reprography Suite", es: "MultiPrintTools | Suite Profesional de Reprografía" },
     description: { 
@@ -57,6 +46,17 @@ const projects = [
     technologies: ["Next.js 15", "React 19", "TypeScript", "Firebase Firestore", "Firebase Authentication", "Google Genkit", "Tailwind CSS", "ShadCN UI", "Lucide Icons"],
     githubUrl: "https://github.com/TeKronS/NextShop",
     liveUrl: "https://next-shop-beta-eight.vercel.app/",
+  },
+  {
+    id: "gestor-rifas-pro",
+    title: { en: "Raffle Admin Pro", es: "Gestor de Rifas Pro" },
+    description: { 
+      en: "A comprehensive platform for professional raffle and sweepstakes management. It automates ticket sales, real-time payment verification, and random number assignment. Features include role management for admins and employees, automatic financial summaries, and action auditing.", 
+      es: "Una plataforma integral para la administración profesional de sorteos y rifas. Automatiza la venta de boletos, la verificación de pagos en tiempo real y la asignación aleatoria de números. Incluye gestión de roles para administradores y empleados, resúmenes financieros automáticos y auditoría de acciones." 
+    },
+    technologies: ["Next.js 15", "React", "TypeScript", "Firebase", "Tailwind CSS", "ShadCN UI", "Lucide Icons", "Zod", "React Hook Form"],
+    githubUrl: "https://github.com/TeKronS/Gestor-de-Rifas",
+    liveUrl: "https://gestor-de-rifas.vercel.app/",
   },
   {
     id: "project-5",
