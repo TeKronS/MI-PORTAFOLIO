@@ -33,7 +33,7 @@ export function Footer() {
     },
     {
       icon: <Github className="h-5 w-5" />,
-      href: "https://github.com",
+      href: "https://github.com/TeKronS/",
       label: "GitHub"
     },
     {
