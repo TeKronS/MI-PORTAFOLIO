@@ -37,6 +37,17 @@ const projects = [
     liveUrl: "https://www.multiprinttools.com/",
   },
   {
+    id: "odontocare",
+    title: { en: "OdontoCare - Dental Clinic Landing Page", es: "OdontoCare - Landing Page para Clínica Dental" },
+    description: { 
+      en: "A modern and professional landing page designed for dental clinics. Focused on patient conversion, it features a responsive design, detailed service catalog, professional profile, and a direct contact system.", 
+      es: "Una página de aterrizaje moderna y profesional diseñada para clínicas dentales. Enfocada en la conversión de pacientes, cuenta con un diseño responsivo, catálogo de servicios detallado, perfil profesional y un sistema de contacto directo." 
+    },
+    technologies: ["Next.js 15", "React 19", "Tailwind CSS", "ShadCN UI", "TypeScript", "Lucide React", "Vercel Analytics"],
+    githubUrl: "https://github.com/TeKronS/landingPage",
+    liveUrl: "https://odonto-care-xi.vercel.app/",
+  },
+  {
     id: "nextshop",
     title: { en: "NextShop - E-commerce", es: "NextShop - E-commerce" },
     description: { 
