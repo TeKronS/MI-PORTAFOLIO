@@ -8,9 +8,9 @@
     },
     {
       "id": "gestor-rifas-pro",
-      "description": "Gestor de Rifas Pro Logo",
-      "imageUrl": "/RifaIcon.png",
-      "imageHint": "raffle logo"
+      "description": "Gestor de Rifas Pro Interface",
+      "imageUrl": "/img/Gestor de rifas.png",
+      "imageHint": "raffle dashboard"
     },
     {
       "id": "odontocare",
