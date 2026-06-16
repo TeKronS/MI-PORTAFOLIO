@@ -8,9 +8,9 @@
     },
     {
       "id": "gestor-rifas-pro",
-      "description": "Gestor de Rifas Pro Administration Panel",
-      "imageUrl": "/img/gestor.png",
-      "imageHint": "admin dashboard"
+      "description": "Gestor de Rifas Pro Logo",
+      "imageUrl": "/RifaIcon.png",
+      "imageHint": "raffle logo"
     },
     {
       "id": "nextshop",

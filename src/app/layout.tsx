@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
@@ -6,6 +7,8 @@ import { Footer } from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/components/language-provider';
 import { HtmlLangUpdater } from '@/components/html-lang-updater';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: 'Tekron Web Studio | Simon Enrique Ramirez Ferrer',
@@ -37,6 +40,8 @@ export default function RootLayout({
             {children}
             <Footer />
             <Toaster />
+            <Analytics />
+            <SpeedInsights />
           </LanguageProvider>
         </ThemeProvider>
       </body>
